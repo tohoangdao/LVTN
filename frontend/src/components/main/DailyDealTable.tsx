@@ -7,6 +7,7 @@ import Edit from "@/assets/pencil.svg";
 import Button from "../common/Button";
 import { useParams } from "next/navigation";
 import Toggle from "../common/Toggle";
+import Badge from "../common/Badge";
 
 interface ServiceItem {
   _id: string; // Use _id as the unique key
@@ -98,6 +99,7 @@ function DailyDealTable() {
       title: "Discount percentage",
       dataIndex: "discount",
       key: "discount",
+      width:200,
       render: (text: string, record: ServiceItem) =>
         isEditing(record) ? (
           <Input
@@ -106,7 +108,7 @@ function DailyDealTable() {
             onChange={(e) => handleInputChange(e, "discount")}
           />
         ) : (
-          text
+          <Badge color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBlueLight500 text-xl">{text}</p></Badge>
         ),
     },
 

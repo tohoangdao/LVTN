@@ -20,14 +20,19 @@ function Booking() {
   const params = useParams();
   const serviceId = params.id as string;
   const router = useRouter();
-  const token = localStorage.getItem("accessToken");
-
+  const [token, setAccessToken] = useState<string | null>(null);
   useEffect(() => {
-    if (!token) {
-      message.info("Please login before booking your service");
-      router.push("/login");
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("accessToken");
+      setAccessToken(token);
+      console.log(token);
+      if (token === null) {
+        message.info("Please login before booking your service");
+        router.push("/login");
+      }
     }
   }, []);
+
 
   useEffect(() => {
     const fetchData = async () => {

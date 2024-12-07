@@ -28,18 +28,18 @@ function Service(data: any) {
       </div>
       <div className="flex flex-col gap-2">
         <h2 className="text-4xl font-bold">{data.store.name}</h2>
-        <p>Address: {data.store.address}</p>
+        <p className="opacity-60">Address: {data.store.address}</p>
         <div className="flex flex-row gap-5">
-          <span>{data.name}</span>
+          <span className="text-[#f44336]">{data.name}</span>
         </div>
         <div className="flex flex-row gap-5">
           {data.dailyDeal ? (
             <p>
               <span className="line-through opacity-50">{data.price}$</span> -
-              {">"} <span>{(data.price * (100 - data.discount)) / 100}$</span>
+              {">"} <span className="text-utilityBlueLight500">{(data.price * (100 - data.discount)) / 100}$</span>
             </p>
           ) : (
-            <p>${data.price}</p>
+            <p className="text-utilityBlueLight500">${data.price}</p>
           )}
         </div>
         

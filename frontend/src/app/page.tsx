@@ -57,6 +57,7 @@ export default function Home() {
             src="/banner2.jpg"
             alt="banner"
             className="w-full h-[500px]"
+            loading="lazy"
           ></img>
         </div>
         <div className="flex justify-center items-center h-auto w-full">
@@ -64,11 +65,12 @@ export default function Home() {
             src="/banner3.jpg"
             alt="banner"
             className="w-full h-[500px]"
+            loading="lazy"
           ></img>
         </div>
       </Carousel>
 
-      <div className="px-0 md:p-20">
+      <div className="p-0 md:p-20 transition-all duration-300 ease-in-out">
         <div className="flex flex-row items-base gap-8">
           <p className="text-4xl">Stores</p>
           <Link
@@ -79,10 +81,10 @@ export default function Home() {
             <Next />
           </Link>
         </div>
-        <div className="grid grid-cols-5 gap-10 py-7 max-md:flex max-md:overflow-x-auto max-md:space-x-4">
+        <div className="grid grid-cols-4 gap-10 py-7 max-md:flex max-md:overflow-x-auto max-md:space-x-4">
           {storeData
             .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-            .slice(0, 10) // Select the first 12 items
+            .slice(0, 8) // Select the first 10 items
             .map((i: any) => (
               <div
                 key={i._id}
@@ -104,10 +106,10 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-5 gap-10 py-7 max-md:flex max-md:overflow-x-auto max-md:space-x-4">
+        <div className="grid grid-cols-4 gap-10 py-7 max-md:flex max-md:overflow-x-auto max-md:space-x-4">
           {dailyDealData
             .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-            .slice(0, 10) // Select the first 12 items
+            .slice(0, 4) 
             .map((i: any) => (
               <div
                 key={i._id}

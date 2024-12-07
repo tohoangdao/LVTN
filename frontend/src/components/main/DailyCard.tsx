@@ -17,10 +17,10 @@ function DailyCard(data: any) {
         </div>
       </div>
       <h2 className="text-xl font-bold">{data.store.name}</h2>
-      <p className="text-lg font-bold">{data.name}</p>
+      <p className="text-lg font-bold text-[#f44336]">{data.name}</p>
       <p>
-        <span className="line-through opacity-50">{data.price}$</span> -{">"}{" "}
-        <span>{(data.price * (100 - data.discount)) / 100}$</span>
+        <span className=" line-through opacity-50">{data.price}$</span> -{">"}{" "}
+        <span className="text-utilityBlueLight400">{(data.price * (100 - data.discount)) / 100}$</span>
       </p>
       <Button className="bg-mainColor text-white" onClick={handleBooking}>
         Book Now

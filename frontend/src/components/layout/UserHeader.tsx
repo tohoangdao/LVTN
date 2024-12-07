@@ -76,7 +76,7 @@ export default function UserHeader() {
         </ul>
       </nav>
 
-      <div className="flex flex-row items-center gap-3 self-end">
+      <div className="flex flex-row items-center">
         <DropDown
           trigger="click"
           position={{

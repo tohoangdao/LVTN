@@ -8,7 +8,13 @@ import axios from "axios";
 import AppointmentCard from "@/components/main/AppointmentCard";
 
 function Appointment() {
-  const token = localStorage.getItem("accessToken");
+  const [token, setAccessToken] = useState<string | null>(null);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("accessToken");
+      setAccessToken(token);
+    }
+  }, []);
 
   const [data, setData] = useState([]);
   useEffect(() => {

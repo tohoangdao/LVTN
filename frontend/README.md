@@ -1,6 +1,6 @@
-# Tensor TeleNail Frontend App
+#Frontend App
 
-Frontend of Tensor TeleNail, written in React.js with Next.js Framework.
+Frontend , written in React.js with Next.js Framework.
 
 ## Getting Started
 
@@ -29,12 +29,6 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-#### Rules
-
-1. Commit message should be clear and follow standards, including Jira ticket.
-
-- For example: `[TN-111] Fix xyz`
 
 ## Learn More
 

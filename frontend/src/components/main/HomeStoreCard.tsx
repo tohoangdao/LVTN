@@ -10,7 +10,7 @@ function HomeStoreCard(data: any) {
         </div>
 
         <h2 className="text-xl font-bold">{data.name}</h2>
-        <p className="">{data.address}</p>
+        <p className="opacity-60">{data.address}</p>
       </Link>
     </div>
   );

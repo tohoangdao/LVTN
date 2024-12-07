@@ -199,7 +199,7 @@ function StaffTable() {
             onChange={(e) => handleInputChange(e, "salary")}
           />
         ) : (
-          text
+          <Badge color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBlueLight500 text-xl">{text}</p></Badge>
         ),
     },
 

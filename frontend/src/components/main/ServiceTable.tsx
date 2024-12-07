@@ -9,6 +9,7 @@ import Image from "next/image";
 import Button from "../common/Button";
 import { useParams } from "next/navigation";
 import TextArea from "antd/es/input/TextArea";
+import Badge from "../common/Badge";
 
 interface ServiceItem {
   _id: string; // Use _id as the unique key
@@ -186,7 +187,7 @@ function ServiceTable() {
             onChange={(e) => handleInputChange(e, "price")}
           />
         ) : (
-          text
+          <Badge color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBlueLight500 text-xl">{text}</p></Badge>
         ),
     },
     {
@@ -217,7 +218,7 @@ function ServiceTable() {
             onChange={(e) => handleInputChange(e, "duration")}
           />
         ) : (
-          text
+          <Badge rounded color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBrand700 text-xl">{text}</p></Badge>
         ),
     },
     {

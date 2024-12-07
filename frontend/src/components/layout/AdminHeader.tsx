@@ -12,7 +12,6 @@ import Image from "next/image";
 export default function AdminHeader() {
   const router = useRouter();
   const [token, setAccessToken] = useState<string | null>(null);
-  console.log(token);
   useEffect(() => {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("accessToken");
@@ -40,7 +39,7 @@ export default function AdminHeader() {
     <header className="flex flex-row justify-between items-center px-20 py-3 text-textBlack border border-b-2 max-md:px-3 max-md:gap-5">
       <Image src={"/logo.png"} alt="logo" width={70} height={70}></Image>
 
-      <div className="flex flex-row items-center gap-3 self-end">
+      <div className="flex flex-row items-center">
         <DropDown
           trigger="click"
           position={{

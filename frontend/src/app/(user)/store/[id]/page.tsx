@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import Badge from "@/components/common/Badge";
 import ServiceCard from "@/components/main/ServiceCard";
 import apiConfig from "@/core/api-config";
 import axios from "axios";
@@ -38,11 +39,12 @@ function StorePage() {
       <div className="flex flex-row gap-10 max-md:flex-col">
         <Image src={storeData.image} alt="store" width={300} height={200} />
         <div className="flex flex-col gap-3">
-          <h2 className="text-6xl font-bold">{storeData?.name}</h2>
-          <p className="text-2xl">Address: {storeData.address}</p>
-          <p className="text-2xl">
-            Working Time: {storeData.openTime} - {storeData.closeTime}
-          </p>
+          <h2 className="text-5xl font-bold">{storeData?.name}</h2>
+          <p className="text-2xl opacity-60">Address: {storeData.address}</p>
+          <div className="flex flex-row items-center">
+          <p className="text-2xl">Working Time: </p>
+          <Badge rounded color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBrand700 text-2xl">{storeData.openTime} - {storeData.closeTime}</p></Badge>
+        </div>
         </div>
       </div>
       <div>

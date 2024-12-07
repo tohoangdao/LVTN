@@ -62,7 +62,6 @@ appointmentRoute.get("/user/:userId", async (req, res) => {
 appointmentRoute.get("/:storeId", async (req, res) => {
   try {
     const { storeId } = req.params;
-    console.log(storeId);
     const appointments = await Appointment.find({ store: storeId })
       .populate("user", "firstName lastName phoneNumber")
       .populate("service")

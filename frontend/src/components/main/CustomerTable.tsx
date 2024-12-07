@@ -2,6 +2,7 @@ import apiConfig from "@/core/api-config";
 import { Table } from "antd";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Badge from "../common/Badge";
 
 function CustomerTable() {
   const [data, setData] = useState([]);
@@ -41,6 +42,11 @@ function CustomerTable() {
       key: "address",
     },
     {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
       title: "Gender",
       dataIndex: "gender",
       key: "gender",
@@ -49,6 +55,8 @@ function CustomerTable() {
       title: "Spend",
       dataIndex: "totalSpend",
       key: "totalSpend",
+      render: (text: number) =>
+        <Badge color="#f9f5ff" borderColor="#e9d7fe"><p className="text-utilityBlueLight500 text-xl">{text}</p></Badge>
     },
     
   ];

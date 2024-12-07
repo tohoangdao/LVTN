@@ -24,7 +24,7 @@ function AppointmentCard(data: any) {
     <div className="border flex flex-row items-center justify-between px-8 shadow-lg">
       <div className="flex flex-col gap-2 py-8 pr-6 border-r">
         <p>{data.bookingTime}</p>
-        <p>${data.price}</p>
+        <p className="text-utilityBlueLight500">${data.price}</p>
       </div>
       <div className="flex flex-col gap-2 py-8">
         <p className="font-bold text-2xl">{data.store.name}</p>
