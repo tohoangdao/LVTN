@@ -51,7 +51,7 @@ function StorePage() {
   };
 
   return (
-    <main className="px-60 py-10 flex flex-col gap-4 max-md:px-0">
+    <main className="px-60 py-10 flex flex-col gap-4 max-md:px-0 max-lg:px-10">
       <div className="flex gap-4 mb-xl w-full items-center max-sm:p-0 max-sm:flex-col max-sm:justify-center">
         <div className="w-1/3 max-lg:w-1/2 max-md:w-full">
           <Input
