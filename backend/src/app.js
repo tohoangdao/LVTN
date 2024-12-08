@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require('cors');
 const { default: configViewEngine } = require("./configs/viewEngine");
 const connection = require('./configs/database');
-import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
 const path = require('path');
 
 import authRoute from './router/auth.js'

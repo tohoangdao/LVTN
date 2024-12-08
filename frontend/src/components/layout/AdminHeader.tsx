@@ -17,6 +17,9 @@ export default function AdminHeader() {
       const token = localStorage.getItem("accessToken");
       setAccessToken(token);
     }
+    if (token === null) {
+      router.push("/");
+    }
   }, []);
 
   const handleLogout = () => {
@@ -27,7 +30,6 @@ export default function AdminHeader() {
   };
 
   useEffect(() => {
-    if (token === "") router.push("/");
     if (token) {
       const decodedToken: { user: { role: string } } = jwtDecode(token);
       if (decodedToken.user.role !== "Admin") {
