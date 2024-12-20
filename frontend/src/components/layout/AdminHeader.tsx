@@ -15,10 +15,10 @@ export default function AdminHeader() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("accessToken");
+      if (token) {
       setAccessToken(token);
-    }
-    if (token === null) {
-      router.push("/");
+      }
+      else setAccessToken("");
     }
   }, []);
 
@@ -30,6 +30,9 @@ export default function AdminHeader() {
   };
 
   useEffect(() => {
+    if (token === "") {
+      router.push("/");
+    }
     if (token) {
       const decodedToken: { user: { role: string } } = jwtDecode(token);
       if (decodedToken.user.role !== "Admin") {

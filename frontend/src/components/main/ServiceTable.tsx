@@ -225,6 +225,7 @@ function ServiceTable() {
       title: "Image",
       dataIndex: "image",
       key: "image",
+      width:200,
       render: (image: string, record: ServiceItem) =>
         isEditing(record) ? (
           <div>

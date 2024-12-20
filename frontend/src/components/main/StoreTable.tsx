@@ -211,6 +211,7 @@ function StoreTable() {
       title: "Image",
       dataIndex: "image",
       key: "image",
+      width:200,
       render: (image: string, record: StoreItem) =>
         isEditing(record) ? (
           <div>

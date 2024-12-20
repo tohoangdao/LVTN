@@ -35,8 +35,8 @@ app.get("/hello", (req, res) => {
   res.status(200).send("<h1>Hello GFG Learner!</h1>");
 });
 
-app.use('/store', express.static(path.join(__dirname, 'src/public/store')));
-app.use('/service', express.static(path.join(__dirname, 'src/public/service')));
+app.use('/store', express.static('src/public/store'));
+app.use('/service', express.static('src/public/service'));
 
 app
 .use('/api/auth', authRoute)

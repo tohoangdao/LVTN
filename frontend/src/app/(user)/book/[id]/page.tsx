@@ -25,7 +25,6 @@ function Booking() {
     if (typeof window !== "undefined") {
       const token = localStorage.getItem("accessToken");
       setAccessToken(token);
-      console.log(token);
       if (token === null) {
         message.info("Please login before booking your service");
         router.push("/login");
